@@ -4,6 +4,7 @@ const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
+const methodOverride = require("method-override");
 dotenv.config();
 
 const indexRouter = require("./routes/index");
@@ -16,6 +17,7 @@ app.set("layout", "layouts/layout");
 app.use(expressLayouts);
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
+app.use(methodOverride("_method"));
 
 mongoose.connect(process.env.DATABASE_URL);
 const db = mongoose.connection;
