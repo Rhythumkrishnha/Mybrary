@@ -16,10 +16,16 @@
       rel="stylesheet"
     />
     <title>Document</title>
+    <link rel="stylesheet" href="/stylesheet/main.css">
   </head>
   <body>
-    <%- include("../partials/header.ejs") %> <%-
-    include("../partials/errorMessage") %> <%- body %>
+    <div class="container">
+      <%- include("../partials/header.ejs") %> 
+      <div class="inner-container">
+        <%- include("../partials/errorMessage") %> 
+        <%- body %>
+      </div>
+  </div>
 
     <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
     <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
