@@ -26,6 +26,7 @@
 
 .book-details {
   display: flex;
+  gap: 20px;
 }
 
 .book-details-label {
